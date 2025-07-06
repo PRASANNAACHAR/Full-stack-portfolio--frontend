@@ -63,12 +63,20 @@ const Hero = () => {
           </Button>
         </a>
 
-        <a href={user.resume && user.resume.url} target="_blank" rel="noopener noreferrer">
-          <Button className="rounded-[30px] flex items-center gap-2 flex-row">
-            <ExternalLink />
-            <span>Resume</span>
-          </Button>
-        </a>
+        {user.resume && user.resume.url ? (
+  <a href={user.resume.url} target="_blank" rel="noopener noreferrer">
+    <Button className="rounded-[30px] flex items-center gap-2 flex-row">
+      <ExternalLink />
+      <span>Resume</span>
+    </Button>
+  </a>
+) : (
+  <Button className="rounded-[30px] flex items-center gap-2 flex-row" disabled>
+    <ExternalLink />
+    <span>No Resume</span>
+  </Button>
+)}
+
 
         </div>
         <p className='mt-8 text-xl trackin-[2px]'>
