@@ -47,9 +47,9 @@ const Hero = () => {
             <Link to={user.facebookURL} target='_blank'>
             < Facebook className='text-blue-800 w-7 h-7'/>
             </Link>
-            <Link to={user.linkedInURL} target='_blank'>
+            <a to={user.href="https://www.linkedin.com/in/prasann-aachar/"} target='_blank'>
               <Linkedin className='text-sky-500 w-7 h-7'/>
-            </Link>
+            </a>
             <Link to={user.twitterURL} target='_blank'>
              <Twitter className='text-blue-600 w-7 h-7'/>
             </Link>
