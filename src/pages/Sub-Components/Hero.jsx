@@ -71,9 +71,7 @@ const Hero = () => {
         </a>
 
         </div>
-        <p className='mt-8 text-xl trackin-[2px]'>
-         {user.aboutMe}
-        </p>
+        
         <hr  className='my-8 md:my-10'/>
     </div>
   )

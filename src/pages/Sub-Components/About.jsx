@@ -40,13 +40,12 @@ const [user, setUser] = useState({});
             <img src={user.avatar && user.avatar.url} alt={user.fullName} className='bg-white p-1 w-80  h-80' />
           </div>
           <div className='flex justify-center flex-col tracking-[1px] text-xl gap-5'>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore optio delectus itaque tempore magni atque! Incidunt minus sint dolores alias!</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolorem illo velit cumque dolore, nihil tenetur qui odio et aut possimus cum rerum ipsam obcaecati impedit quam ad eos quia.</p>
+            <p>{user.aboutMe}</p>
+             <p>{user.aboutMe}</p>
           </div>
         </div>
         <p className='tracking-[1px] text-xl'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ex dolor nam assumenda repellendus perferendis iusto veritatis, earum dignissimos commodi placeat dolorem explicabo. Ratione itaque inventore laborum minima, ducimus veritatis nisi deserunt ab hic, ea dicta velit quisquam sed officia.
+           {user.aboutMe}
         </p>
       </div>
     </div>
