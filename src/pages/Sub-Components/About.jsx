@@ -43,6 +43,9 @@ const [user, setUser] = useState({});
             <p>{user.aboutMe}</p>
           </div>
         </div>
+        <p className='tracking-[1px] text-xl'>
+          {user.aboutMe}
+        </p>
       </div>
     </div>
   )

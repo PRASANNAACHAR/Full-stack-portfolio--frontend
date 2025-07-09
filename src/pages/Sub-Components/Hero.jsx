@@ -47,21 +47,19 @@ const Hero = () => {
             <Link to={user.facebookURL} target='_blank'>
             < Facebook className='text-blue-800 w-7 h-7'/>
             </Link>
-        <a href="https://www.linkedin.com/in/prasann-aachar/" target="_blank" rel="noopener noreferrer">
+
+        <Link to={user.linkedInURL} target='_blank'>
           <Linkedin className='text-sky-500 w-7 h-7' />
-        </a>
+        </Link>
 
             <Link to={user.twitterURL} target='_blank'>
              <Twitter className='text-blue-600 w-7 h-7'/>
             </Link>
         </div>
         <div className='mt-4 md:mt-8 lg:mt-10 flex gap-3 '>
-        <a href="https://github.com/PRASANNAACHAR" target="_blank" rel="noopener noreferrer">
-          <Button className="rounded-[30px] flex items-center gap-2 flex-row">
-            <Github />
-            <span>Github</span>
-          </Button>
-        </a>
+        <Link to={user.githubURL} target='_blank'>
+          <Github className='w-7 h-7' />
+        </Link>
 
         <a href={user.resume && user.resume.url} target="_blank" rel="noopener noreferrer">
           <Button className="rounded-[30px] flex items-center gap-2 flex-row">
