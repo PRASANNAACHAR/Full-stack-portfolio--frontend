@@ -41,12 +41,8 @@ const [user, setUser] = useState({});
           </div>
           <div className='flex justify-center flex-col tracking-[1px] text-xl gap-5'>
             <p>{user.aboutMe}</p>
-             <p>{user.aboutMe}</p>
           </div>
         </div>
-        <p className='tracking-[1px] text-xl'>
-           {user.aboutMe}
-        </p>
       </div>
     </div>
   )
