@@ -31,7 +31,7 @@ const TImeline = () => {
                 <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
               </svg>
             </span>
-            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{element._title}</h3>
+            <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">{element.title}</h3>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{element.timeline.from} - {element.timeline.to ? element.timeline.to : "Present"} </time>
             <p className="text-base font-normal text-gray-500 dark:text-gray-400">{
              element.description
