@@ -111,15 +111,20 @@ const Portfolio = () => {
             <Link
               to={`/project/${element._id}`}
               key={element._id}
-              className="bg-[#1e1e2f] rounded-xl p-4 hover:scale-105 transition-transform duration-300 shadow-md"
+              className="bg-transparent p-2 rounded-xl hover:scale-105 transition-transform duration-300 shadow-md border border-slate-700"
             >
-              <img
-                src={element.projectBanner?.url}
-                alt="project banner"
-                className="w-full h-48 object-cover rounded-md"
-              />
-              <p className="text-white mt-3 text-center font-medium">{element.title || "Untitled Project"}</p>
+              <div className="bg-[#0f172a] rounded-lg overflow-hidden p-4 flex flex-col items-center justify-center h-full">
+                <img
+                  src={element.projectBanner?.url}
+                  alt="project banner"
+                  className="w-full max-h-40 object-contain mb-3"
+                />
+                <p className="text-white text-sm text-center font-medium">
+                  {element.title || "Untitled Project"}
+                </p>
+              </div>
             </Link>
+
           ))
         }
       </div>
