@@ -41,12 +41,12 @@ const [viewAll, setViewAll] = useState();
       <Link 
         to={`/project/${element._id}`} 
         key={element._id}
-        className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300"
+        className="bg-transparent rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300"
       >
         <img 
   src={element.projectBanner && element.projectBanner.url} 
   alt="project banner" 
-  className="w-full h-48 object-contain bg-white p-4" 
+  className="w-full h-48 object-contain bg-transparent p-4" 
 />
 
         <div className="p-4 text-center">
