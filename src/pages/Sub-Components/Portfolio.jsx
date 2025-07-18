@@ -34,30 +34,31 @@ const [viewAll, setViewAll] = useState();
         </h1>
         <span className='absolute w-full h-1 top-7 sm:top-7 md:top-8 lg:top-11 z-[-1] bg-slate-200'></span>
       </div>
-          
-         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-  {
-    (viewAll ? projects : projects.slice(0,6)).map((element) => (
-      <Link 
-        to={`/project/${element._id}`} 
-        key={element._id}
-        className="bg-transparent rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300"
-      >
-        <img 
-  src={element.projectBanner && element.projectBanner.url} 
-  alt="project banner" 
-  className="w-full h-48 object-contain bg-transparent p-4" 
-/>
 
-        <div className="p-4 text-center">
-          <h2 className="text-lg font-semibold text-gray-800 truncate">
-            {element.title || "Untitled Project"}
-          </h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          {
+            (viewAll ? projects : projects.slice(0, 6)).map((element) => (
+              <Link
+                to={`/project/${element._id}`}
+                key={element._id}
+                className="border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:border-blue-500 transition duration-300"
+              >
+                <img
+                  src={element.projectBanner && element.projectBanner.url}
+                  alt="project banner"
+                  className="w-full h-48 object-contain bg-transparent p-4"
+                />
+
+                <div className="p-4 text-center">
+                  <h2 className="text-lg font-semibold text-gray-800 truncate">
+                    {element.title || "Untitled Project"}
+                  </h2>
+                </div>
+              </Link>
+
+            ))
+          }
         </div>
-      </Link>
-    ))
-  }
-</div>
 
 
          {
