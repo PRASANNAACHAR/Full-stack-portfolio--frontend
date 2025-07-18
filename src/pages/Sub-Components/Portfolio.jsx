@@ -113,7 +113,7 @@ const Portfolio = () => {
               key={element._id}
               className="bg-transparent p-2 rounded-xl hover:scale-105 transition-transform duration-300 shadow-md border border-slate-700"
             >
-              <div className="bg-[#0f172a] rounded-lg overflow-hidden p-4 flex flex-col items-center justify-center h-full">
+              <div className="rounded-lg overflow-hidden p-4 flex flex-col items-center justify-center h-full">
                 <img
                   src={element.projectBanner?.url}
                   alt="project banner"
