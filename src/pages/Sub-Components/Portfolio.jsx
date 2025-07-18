@@ -90,7 +90,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="bg-[#0f172a] py-10 px-4">
+    <div className="py-10 px-4">
       {/* Header */}
       <div className='relative mb-12'>
         <h1 className='hidden sm:flex gap-4 items-center text-[2rem] sm:text-[1.7rem] md:text-[3rem] lg:text-[3.8rem] leading-[56px] md:leading-[67px] lg:leading-[90px] tracking-[15px] mx-auto w-fit font-extrabold text-white'>
@@ -111,19 +111,20 @@ const Portfolio = () => {
             <Link
               to={`/project/${element._id}`}
               key={element._id}
-              className="bg-transparent p-2 rounded-xl hover:scale-105 transition-transform duration-300 shadow-md border border-slate-700"
+              className="p-4 rounded-xl hover:scale-105 transition-transform duration-300 border border-slate-600"
             >
-              <div className="rounded-lg overflow-hidden p-4 flex flex-col items-center justify-center h-full">
+              <div className="rounded-lg overflow-hidden flex flex-col items-center justify-center h-full">
                 <img
                   src={element.projectBanner?.url}
                   alt="project banner"
-                  className="w-full max-h-40 object-contain mb-3"
+                  className="w-full max-h-36 object-contain mb-2"
                 />
                 <p className="text-white text-sm text-center font-medium">
                   {element.title || "Untitled Project"}
                 </p>
               </div>
             </Link>
+
 
           ))
         }
