@@ -41,8 +41,9 @@ const [viewAll, setViewAll] = useState();
               <Link
                 to={`/project/${element._id}`}
                 key={element._id}
-                className="border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:border-blue-500 transition duration-300"
-              >
+                className="border border-gray-[#020817] rounded-xl overflow-hidden shadow-md hover:shadow-xlhover:border-[#020817]
+ transition duration-300"
+              > 
                 <img
                   src={element.projectBanner && element.projectBanner.url}
                   alt="project banner"
