@@ -35,23 +35,24 @@ const [viewAll, setViewAll] = useState();
         <span className='absolute w-full h-1 top-7 sm:top-7 md:top-8 lg:top-11 z-[-1] bg-slate-200'></span>
       </div>
           
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-            {
-              viewAll ? projects && projects.map((element)=>{
-                return(
-                <Link to={`/project/${element._id}`} key={element._id}>
-                  <img src={element.projectBanner && element.projectBanner.url} alt="project banner" />
-                </Link>
-                );
-              }) : projects && projects.slice(0,6).map((element)=>{
-                return(
-                <Link to={`/project/${element._id}`} key={element._id}>
-                <img src={element.projectBanner && element.projectBanner.url} alt="project banner" />
-              </Link>
-                )
-              })
-            }
-          </div>
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+  {
+    (viewAll ? projects : projects.slice(0, 6)).map((element) => (
+      <Link
+        to={`/project/${element._id}`}
+        key={element._id}
+        className="rounded-xl shadow-md bg-white dark:bg-[#1a1a1a] p-4 flex items-center justify-center h-[200px]"
+      >
+        <img
+          src={element.projectBanner?.url}
+          alt="project banner"
+          className="max-h-[140px] w-auto object-contain"
+        />
+      </Link>
+    ))
+  }
+</div>
+
          {
           projects && projects.length > 6 && (
             <div className='w-full text-center my-9'>
