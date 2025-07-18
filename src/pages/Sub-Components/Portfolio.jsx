@@ -44,10 +44,11 @@ const [viewAll, setViewAll] = useState();
         className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300"
       >
         <img 
-          src={element.projectBanner && element.projectBanner.url} 
-          alt="project banner" 
-          className="w-full h-48 object-cover" 
-        />
+  src={element.projectBanner && element.projectBanner.url} 
+  alt="project banner" 
+  className="w-full h-48 object-contain bg-white p-4" 
+/>
+
         <div className="p-4 text-center">
           <h2 className="text-lg font-semibold text-gray-800 truncate">
             {element.title || "Untitled Project"}
